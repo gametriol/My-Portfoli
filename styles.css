@@ -497,3 +497,7 @@ canvas{
 .myintro p {
   font-size: 1.25rem; /* Adjust this value as needed */
 }
+.button{
+  margin-top: 10px;
+  margin-left: 10px;
+}
