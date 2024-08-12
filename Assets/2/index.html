@@ -1,65 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-  <meta charset="UTF-8">
-  <title>CSS Flag Project</title>
+  <title>Flexbox Pricing Table</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sono:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    .flag{
-      background-color: #ce1126;
-      height: 600px;
-      width: 900px;
-      position: relative;
+    body {
+      font-family: 'Sono', sans-serif;
     }
-    .flag > div{
-      width: 100% ;
-      height: 300px;
-      background-color: #002868;
-      position: absolute;
-      top: 150px;
+    .pricing-container{
+      flex-wrap: wrap;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;;
+      
+      height: 100vh;
+      align-content: center;
+      
     }
-    .flag > div >div{
-      height: 200px;
-      width: 200px;
-      background-color: white;
-      border-radius: 50%;
-      position: relative;
-      top: 50px;
-      left: 350px;
-    }
-    p{
-      margin: 0px;
-      font-size: 5rem;
+    .pricing-plan{
+      flex:1;
+      max-width: 400px;
+      padding: 20px;
+      border-radius: 20%;
+      background-color: #f2f2f2;
       text-align: center;
-      color: white;
     }
-    .flag>div>div>p{
-      color: black;
+    .plan-title{
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 5px;
     }
-    
+    .plan-price{
+      font-size: 30px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .plan-features{
+      list-style: none;
+      padding:0px;
+      margin: 0px;
+    }
+    .plan-features li{
+      margin-bottom: 10px;  
+    }
+    .plan-button{
+      padding: 10px;
+      border-radius: 5px;
+      color: #fff;
+      border: none;
+      background-color:#ff6600 ;
+    }
+
+    /* Hint: What can you do with a media query and flexbox? */
+    @media (max-width: 1250px) {
+      
+    }
   </style>
 </head>
 
-<!-- 
-  IMPORTANT! Do not change any HTML
-Don't add any classes/ids/elements 
-Use what you know about combining selectors 
-and CSS specificity instead.
-Hint 1: The flag is 900px by 600px and the circle is 200px by 200px.
-Hint 2: You can use CSS inspection to get the colors from
-https://appbrewery.github.io/flag-of-laos/
--->
-
 <body>
-  <div class="flag">
-    <p>The Flag</p>
-    <div>
-      
-      <div>
-        <p>of Laos</p>
-      </div>
+  <div class="pricing-container">
+    <div class="pricing-plan">
+      <div class="plan-title">Basic</div>
+      <div class="plan-price">$9.99/month</div>
+      <ul class="plan-features">
+        <li>✅ 10GB Storage</li>
+        <li>✅ 1 User</li>
+        <li>🚫 Support</li>
+      </ul>
+      <button class="plan-button">Sign Up</a>
+    </div>
+    <div class="pricing-plan">
+      <div class="plan-title">Standard</div>
+      <div class="plan-price">$19.99/month</div>
+      <ul class="plan-features">
+        <li>✅ 50GB Storage</li>
+        <li>✅ 5 Users</li>
+        <li>✅ Phone &amp; Email Support</li>
+      </ul>
+      <button class="plan-button">Sign Up</a>
+    </div>
+    <div class="pricing-plan">
+      <div class="plan-title">Premium</div>
+      <div class="plan-price">$49.99/month</div>
+      <ul class="plan-features">
+        <li>✅ 100GB Storage</li>
+        <li>✅ 10 Users</li>
+        <li>✅ 24/7 Support</li>
+      </ul>
+      <button class="plan-button">Sign Up</a>
     </div>
   </div>
+
 </body>
 
 </html>

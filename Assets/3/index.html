@@ -1,48 +1,84 @@
 <!DOCTYPE html>
-<html>
-
-<!-- 
-  TODO
-1. By changing only the display property of the CSS make all 3 squares line up horizontally like in goal1 image.
-2. Change only the display property to make all 3 squares line up vertically like in goal2 image. 
--->
+<html lang="en">
 
 <head>
-  <title>CSS Display Property Example</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mondrian Project</title>
   <style>
-    p {
-      color: white;
-    }
+    /* 
+    Write your CSS here 
+    Gap Colour: #000
+    White: #F0F1EC
+    Red: #E72F24
+    Black: #232629
+    Blue: #004592
+    Yellow: #F9D01E
 
-    .red {
-      display: block;
-      width: 200px;
-      height: 200px;
-      background-color: red;
+    For dimensions, see dimensions.png image.
+    HINT: Remember you can't change the properties of grid lines.
+    But grid lines are transparent!
+    */
+    body{
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+      margin: 0px;
+      padding: 0px;
     }
-
-    .green {
-      display: block;
-      width: 200px;
-      height: 200px;
-      background-color: green;
+    .container{
+      height: 748px;
+      width: 748px;
+      display:grid;
+      gap: 9px;
+      grid-template-columns: 320px 198px 153px 50px;
+      grid-template-rows: 414px 130px 155px 22px ;
+      background-color: black;
     }
- 
-    .blue {
-      display: block;
-      width: 200px;
-      height: 200px;
-      background-color: blue;
+    .item{
+      background-color: #F0F1EC;
+    }
+    .red{
+      background-color: #E72F24;
+    }
+    .w1{
+      grid-column: span 3;
+    }
+    .w2{
+      grid-row: span 2;
+    }
+    .w3{
+      grid-area: 2/2/4/4;
+    }
+    .w4{
+      grid-row: span 2;
+    }
+    .blue{
+      background-color: #004592;
+      border-bottom: 10px solid black;
+    }
+    .yellow{
+      background-color: #F9D01E;
+    }
+    .black{
+      background-color: #232629;
     }
   </style>
 </head>
 
-
 <body>
-  <h1>CSS Display Property</h1>
-  <p class="red">Red Paragraph </p>
-  <p class="green">Green Paragraph</p>
-  <p class="blue">Blue Paragraph</p>
+  <div class="container">
+    <div class="item red"></div>
+    <div class="item w1"></div>
+    <div class="item w2"></div>
+    <div class="item w3"></div>
+    <div class="item blue"></div>
+    <div class="item w4"></div>
+    <div class="item"></div>
+    <div class="item yellow"></div>
+    <div class="item black"></div>
+  </div>
 </body>
 
 </html>

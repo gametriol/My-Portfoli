@@ -3,50 +3,36 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>CSS Box Model</title>
-  <style>
-    div {
-      height: 200px;
-      width: 200px;
-    }
-
-    p {
-      margin: 0;
-    }
-
-    #first {
-      background-color: cadetblue;
-      padding: 20px;
-      border: 10px solid black;
-    }
-
-    #second {
-      background-color: gold;
-      border: solid black;
-      border-width: 20px 10px;
-      margin-left: 260px;
-    }
-
-    #third {
-      background-color: indianred;
-      border: 10px solid black;
-      margin-left: 40px;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agency</title>
+  <link rel="stylesheet" href="./solution.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <div id="first">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at sapien porttitor urna elementum lacinia. In
-      id magna pulvinar, ultricies lorem id, vehicula elit. Aliquam eu luctus nisl, vitae pellentesque magna. Phasellus
-      dolor metus, laoreet ac convallis sit amet, efficitur sed dolor. </p>
-  </div>
-  <div id="second">
+  <div class="main">
+    <img class="logo" src="./assets/images/logo.png" alt="logo">
+    <h1>We are a <span class="creative">Creative</span> <br />Design Agency</h1>
+    <div class="left card"><img class="tile-image" src="./assets/images/beautiful.jpg" alt="hand and flower in water">
+      <h2 class="card-title">Beauty</h2>
+      <p class="card-text">We strive to create the most beautiful websites for all your needs. Working closely with you
+        to
+        design and
+        develop an amazing website for your business.</p>
+    </div>
+
+    <div class="right card"><img class="tile-image" src="./assets/images/construction.jpg" alt="metal structure">
+      <h2 class="card-title">Construction</h2>
+      <p>Built by our team of professional developers, we ensure the most rigourous and modern websites. Built from
+        scratch using HTML and CSS. Only the best for you.</p>
+    </div>
 
   </div>
-  <div id="third">
-
-  </div>
+  <footer>
+    <p>Create. Develop. Design.</p>
+  </footer>
 </body>
 
 </html>
