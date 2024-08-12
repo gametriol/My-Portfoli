@@ -416,10 +416,27 @@ h4 {
 }
 
 .gradient-background {
-  animation: animatedBackground 20s step-start infinite;
+  /* animation: animatedBackground 20s step-start infinite;
   background: linear-gradient(45deg, red,green  ,blue);
-  background-size: 400% 400%;
+  background-size: 400% 400%; */
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;    
 }
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
 @keyframes animatedBackground {
   0% {
     background-position: 0% 50%;
@@ -500,4 +517,12 @@ canvas{
 .button{
   margin-top: 10px;
   margin-left: 10px;
+}
+.random{
+  mix-blend-mode: multiply;
+  color: white;
+}
+.blur-background {
+  backdrop-filter: blur(50px);
+  background-color: rgba(244, 238, 238, 0.2); /* Optional: adds a translucent white background */
 }
