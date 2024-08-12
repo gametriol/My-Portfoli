@@ -524,5 +524,42 @@ canvas{
 }
 .blur-background {
   backdrop-filter: blur(50px);
-  background-color: rgba(244, 238, 238, 0.2); /* Optional: adds a translucent white background */
+  background-color: rgba(244, 238, 238, 0.2);
+  position: relative;
+}
+.shadow-md {
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+.shadow-md:hover {
+  transform: translateY(-5px);
+}
+
+.container {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-3px);
+  }
+}
+.col-lg-6 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* Center-aligns the text content */
+  height: 100%; /* Ensure the column takes up the full height of its container */
+}
+
+
+.myintro p.lead {
+    font-size: 2rem !important;
+    line-height: 1.6 !important;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
